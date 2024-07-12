@@ -27,6 +27,12 @@ class User(db.Model):
 with app.app_context():
     db.create_all()
 
+@app.route('/refresh_app', methods=['GET'])
+def create_tables():
+    db.drop_all()
+    db.create_all()
+    return jsonify({'message': 'Tables created successfully'}), 200
+
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()

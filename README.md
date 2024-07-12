@@ -34,6 +34,8 @@ cd ..
 cd ai-service-api
 python app.py
 # 5000
+cd patient-portal-api
+# 5001
 ```
 
 - Test at `http://localhost:3001/`
