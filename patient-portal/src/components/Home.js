@@ -5,7 +5,6 @@ const Home = () => {
     return (
         <div>
             <h1>Patient Portal Home</h1>
-            <a href="/navigate-to-service">Navigate to AI Service</a>
         </div>
     );
 }

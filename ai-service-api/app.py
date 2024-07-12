@@ -1,10 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
-
-app = Flask(__name__)
 
 
 app = Flask(__name__)
@@ -72,5 +69,10 @@ def delete_user(user_id):
     return jsonify({'message': 'User deleted successfully'}), 200
 
 
+@app.route('/api', methods=['GET'])
+def api():
+    return jsonify({'message': 'Use App API'}), 200
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
